@@ -12,9 +12,9 @@ phases:
     commands:
       - cdk synth # synthesize the CDK app
 
-  # post_build:
-  #   commands:
-  #     - cdk deploy --require-approval never # deploy the CDK app
+  post_build:
+    commands:
+      - cdk deploy --require-approval never # deploy the CDK app
 
 artifacts:
   files:
