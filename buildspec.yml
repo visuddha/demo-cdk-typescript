@@ -14,18 +14,18 @@ phases:
       - npm test
       - cdk synth # synthesize the CDK app
 
-  reports:
-    jest_reports:
-      files:
-        - jest-report.xml
-      file-format: JUNITXML
-    base-directory: reports
-
   post_build:
     commands:
       - cdk deploy --require-approval never # deploy the CDK app
 
+reports:
+  jest_reports:
+    files:
+      - jest-report.xml
+    file-format: JUNITXML
+  base-directory: reports
+
 artifacts:
   files:
-    - '**/*'
+    - "**/*"
   base-directory: cdk.out # output directory for synthesized CloudFormation templates
