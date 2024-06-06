@@ -23,7 +23,7 @@ reports:
     files:
       - jest-report.xml
     file-format: JUNITXML
-  base-directory: reports
+    base-directory: reports
 
 artifacts:
   files:
